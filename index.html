@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+    <style>
+        #spinner {
+            display: none;
+        }
+
+        .col {
+            min-height: 30%;
+            max-height: 30%;
+        }
+
+        .card-img-top {
+            height: 340px !important;
+        }
+
+        #result-number {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            display: none;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <h2 class="m-5 text-center text-success">Find Your Desired Book</h2>
+
+    <div class="input-group mb-3 w-50 mx-auto">
+        <input id="search-field" type="text" class="form-control m-1" placeholder="  Search For Books..."
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+
+        <button onclick="searchBook()" id="button-search" class="btn btn-outline-secondary "
+            type="button">Button</button>
+    </div>
+
+    <!-- this is the spinner for loading time  -->
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" id="spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- spinner tag ends  -->
+
+    <!-- number of results  -->
+    <div id="result-number">
+
+    </div>
+    <!-- search result  -->
+
+    <div id="search-result" class="w-100 mx-auto row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+
+
+    </div>
+
+    <!-- scripts and js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <script src="js/books.js"></script>
+</body>
+
+</html>
