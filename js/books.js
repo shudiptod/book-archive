@@ -2,6 +2,7 @@
 
 // function to get and process the typed text 
 const searchBook = async () => {
+    toggleSpinner("none");
 
     // resetting error messages
     const error = document.getElementById('error');
