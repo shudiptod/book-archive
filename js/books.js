@@ -42,7 +42,7 @@ const searchBook = async () => {
         const data = await res.json();
 
         // send data to check number of result available 
-        countResults(data.docs, data.numFound);
+        countResults(data.docs, data.numFound, searchText);
 
         // send data to display results 
     }
@@ -52,7 +52,7 @@ const searchBook = async () => {
 
 
 // number of results showing 
-const countResults = (allData, foundCount) => {
+const countResults = (allData, foundCount, searchText) => {
 
 
     // check if there is any result for the query 
@@ -67,7 +67,7 @@ const countResults = (allData, foundCount) => {
     else {
         const resultNumber = document.getElementById('result-number');
 
-        resultNumber.innerHTML = `<h6 class="text-center fs-6 fw-lighter">Showing <span class="fw-bold fst-italic">${allData.length}</span> books out of <span class="fw-bold fst-italic">${foundCount}</span> hits</h6>`;
+        resultNumber.innerHTML = `<h6 class="text-center fs-6 fw-lighter">Showing <span class="fw-bold fst-italic">${allData.length}</span> books out of <span class="fw-bold fst-italic">${foundCount}</span> hits for <span class="text-dark fw-bold">"${searchText}"</span>.</h6>`;
         resultNumber.style.display = 'block';
         displaySearchResult(allData);
 
