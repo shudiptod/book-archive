@@ -1,0 +1,19 @@
+#spinner {
+    display: none;
+}
+
+.col {
+    min-height: 30%;
+    max-height: 30%;
+}
+
+.card-img-top {
+    height: 340px !important;
+}
+
+#result-number {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    display: none;
+}
